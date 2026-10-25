@@ -18,13 +18,18 @@
 
 ## 📌 Overview
 
-Proxy Checker
+OProxy is a proxy intelligence framework. It validates single or bulk proxies, fetches free proxies from built-in sources, and classifies each by anonymity level, GeoIP location and speed. Results can be filtered and exported in multiple formats.
 
 ---
 
 ## ✨ Features
 
-- Check and analyse proxy servers: anonymity, GeoIP, speed rating and multi-source fetch
+- Single and bulk proxy liveness checking
+- Fetches proxies from built-in sources
+- Anonymity detection and GeoIP lookup, each optionally disabled
+- Speed rating with threaded checking and configurable timeouts
+- Custom liveness test URL and listing of built-in sources
+- Multi-format export to a chosen output directory
 
 ---
 
@@ -38,7 +43,10 @@ Proxy Checker
 ## 🚀 Usage
 
 ```bash
-./OProxy
+./OProxy --check 1.2.3.4:8080
+./OProxy --bulk proxies.txt --threads 50
+./OProxy --fetch --no-geo
+./OProxy --help
 ```
 
 ---
